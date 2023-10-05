@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petrash JS</title>
+</head>
+
+<body>
+    <h3>Задание 2</h3>
+    <p>Последовательность скобок "[((())()(())]]" является неправильной, так как она не удовлетворяет правилам
+        правильной скобочной последовательности.</p>
+    <p>Что бы сделать ее правильной необходимо заменить предпоследнюю квадратную скобку на круглую - "[((())()(()))]"
+    </p>
+
+    <script>
+        // Задача 1: Проверка числа и вывод "Привет" при необходимости
+        function checkNumberAndSayHello(number) {
+            if (number > 7) {
+                alert("Привет");
+            }
+        };
+        const inputNumber = parseInt(prompt("Введите число:"));
+        checkNumberAndSayHello(inputNumber);
+
+        // Задача 2: Проверка имени и вывод приветствия
+        function checkNameAndSayHello(name) {
+            if (name === "Вячеслав") {
+                alert("Привет, Вячеслав");
+            } else {
+                alert("Нет такого имени");
+            }
+        };
+        const inputName = prompt("Введите имя:");
+        checkNameAndSayHello(inputName);
+
+        // Задача 3: Вывод элементов массива, кратных 3
+        function printMultiplesOfThree(numbers) {
+            let n = "";
+            for (let i = 0; i < numbers.length; i++) {
+                if (numbers[i] % 3 === 0) {
+                    n = n + " " + numbers[i]
+                }
+            }
+            alert("Элементы массива, кратные 3: " + n);
+        };
+        const inputArray = prompt("Введите числа через пробел:").split(" ").map(Number);
+        printMultiplesOfThree(inputArray);
+    </script>
+</body>
+
+</html>
